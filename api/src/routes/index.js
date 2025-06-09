@@ -83,6 +83,10 @@ router.get(
 	}
 );
 
+router.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 router.get('/allproducts', getAllProducts); //no JWT
 router.use('/auth', auth);
 router.use('/products', products); //SI JWT
